@@ -113,115 +113,9 @@ public class ResizerFrame extends JFrame {
                 0.0, 0.0, Double.MIN_VALUE};
         panel.setLayout(gbl_panel);
 
-        ch_ldpi = new JCheckBox("ldpi");
-        ch_ldpi.setSelected(true);
-        GridBagConstraints gbc_ch_ldpi = new GridBagConstraints();
-        gbc_ch_ldpi.insets = new Insets(0, 0, 5, 5);
-        gbc_ch_ldpi.anchor = GridBagConstraints.NORTHWEST;
-        gbc_ch_ldpi.gridx = 0;
-        gbc_ch_ldpi.gridy = 0;
-        panel.add(ch_ldpi, gbc_ch_ldpi);
-
-        ch_mdpi = new JCheckBox("mdpi");
-        ch_mdpi.setSelected(true);
-        ch_mdpi.setHorizontalAlignment(SwingConstants.LEFT);
-        GridBagConstraints gbc_ch_mdpi = new GridBagConstraints();
-        gbc_ch_mdpi.anchor = GridBagConstraints.WEST;
-        gbc_ch_mdpi.insets = new Insets(0, 0, 5, 5);
-        gbc_ch_mdpi.gridx = 0;
-        gbc_ch_mdpi.gridy = 1;
-        panel.add(ch_mdpi, gbc_ch_mdpi);
-
-        ch_tvdpi = new JCheckBox("tvdpi");
-        GridBagConstraints gbc_ch_tvdpi = new GridBagConstraints();
-        gbc_ch_tvdpi.anchor = GridBagConstraints.WEST;
-        gbc_ch_tvdpi.insets = new Insets(0, 0, 5, 5);
-        gbc_ch_tvdpi.gridx = 0;
-        gbc_ch_tvdpi.gridy = 2;
-        panel.add(ch_tvdpi, gbc_ch_tvdpi);
-
-        ch_hdpi = new JCheckBox("hdpi");
-        ch_hdpi.setSelected(true);
-        GridBagConstraints gbc_ch_hdpi = new GridBagConstraints();
-        gbc_ch_hdpi.anchor = GridBagConstraints.WEST;
-        gbc_ch_hdpi.insets = new Insets(0, 0, 5, 5);
-        gbc_ch_hdpi.gridx = 0;
-        gbc_ch_hdpi.gridy = 3;
-        panel.add(ch_hdpi, gbc_ch_hdpi);
-
-        ch_xhdpi = new JCheckBox("xhdpi");
-        ch_xhdpi.setSelected(true);
-        GridBagConstraints gbc_ch_xhdpi = new GridBagConstraints();
-        gbc_ch_xhdpi.anchor = GridBagConstraints.WEST;
-        gbc_ch_xhdpi.insets = new Insets(0, 0, 5, 5);
-        gbc_ch_xhdpi.gridx = 0;
-        gbc_ch_xhdpi.gridy = 4;
-        panel.add(ch_xhdpi, gbc_ch_xhdpi);
-
-        ch_xxhdpi = new JCheckBox("xxhdpi");
-        ch_xxhdpi.setSelected(true);
-        GridBagConstraints gbc_ch_xxhdpi = new GridBagConstraints();
-        gbc_ch_xxhdpi.anchor = GridBagConstraints.WEST;
-        gbc_ch_xxhdpi.insets = new Insets(0, 0, 5, 5);
-        gbc_ch_xxhdpi.gridx = 0;
-        gbc_ch_xxhdpi.gridy = 5;
-        panel.add(ch_xxhdpi, gbc_ch_xxhdpi);
-
-        ch_xxxhdpi = new JCheckBox("xxxhdpi");
-        ch_xxxhdpi.setSelected(true);
-        GridBagConstraints gbc_ch_xxxhdpi = new GridBagConstraints();
-        gbc_ch_xxxhdpi.insets = new Insets(0, 0, 5, 5);
-        gbc_ch_xxxhdpi.gridx = 0;
-        gbc_ch_xxxhdpi.gridy = 6;
-        panel.add(ch_xxxhdpi, gbc_ch_xxxhdpi);
-
-        ch_1x = new JCheckBox("@1x");
-        ch_1x.setSelected(true);
-        GridBagConstraints gbc_ch_1x = new GridBagConstraints();
-        gbc_ch_1x.insets = new Insets(0, 0, 5, 5);
-        gbc_ch_1x.gridx = 0;
-        gbc_ch_1x.gridy = 7;
-        panel.add(ch_1x, gbc_ch_1x);
-
-        ch_15x = new JCheckBox("@1.5x");
-        ch_15x.setSelected(true);
-        GridBagConstraints gbc_ch_15x = new GridBagConstraints();
-        gbc_ch_15x.insets = new Insets(0, 0, 5, 5);
-        gbc_ch_15x.gridx = 0;
-        gbc_ch_15x.gridy = 8;
-        panel.add(ch_15x, gbc_ch_15x);
-
-        ch_2x = new JCheckBox("@2x");
-        ch_2x.setSelected(true);
-        GridBagConstraints gbc_ch_2x = new GridBagConstraints();
-        gbc_ch_2x.insets = new Insets(0, 0, 5, 5);
-        gbc_ch_2x.gridx = 0;
-        gbc_ch_2x.gridy = 9;
-        panel.add(ch_2x, gbc_ch_2x);
-
-        ch_3x = new JCheckBox("@3x");
-        ch_3x.setSelected(true);
-        GridBagConstraints gbc_ch_3x = new GridBagConstraints();
-        gbc_ch_3x.insets = new Insets(0, 0, 5, 5);
-        gbc_ch_3x.gridx = 0;
-        gbc_ch_3x.gridy = 10;
-        panel.add(ch_3x, gbc_ch_3x);
-
-        ch_4x = new JCheckBox("@4x");
-        ch_4x.setSelected(true);
-        GridBagConstraints gbc_ch_4x = new GridBagConstraints();
-        gbc_ch_4x.insets = new Insets(0, 0, 5, 5);
-        gbc_ch_4x.gridx = 0;
-        gbc_ch_4x.gridy = 11;
-        panel.add(ch_4x, gbc_ch_4x);
-
-        ch_windows = new JCheckBox("windows");
-        ch_windows.setSelected(true);
-        GridBagConstraints gbc_ch_windows = new GridBagConstraints();
-        gbc_ch_windows.insets = new Insets(0, 0, 5, 5);
-        gbc_ch_windows.gridx = 0;
-        gbc_ch_windows.gridy = 12;
-        panel.add(ch_windows, gbc_ch_windows);
+        addAndroidCheckboxes(panel);
+        addIosCheckboxes(panel);
+        addWindowsCheckboxes(panel);
 
         panel_1 = new JPanel();
         panel_1.setBorder(new TitledBorder("Options"));
@@ -372,6 +266,122 @@ public class ResizerFrame extends JFrame {
 
                 });
 
+    }
+
+    private void addWindowsCheckboxes(JPanel panel) {
+        ch_windows = new JCheckBox("windows");
+        ch_windows.setSelected(true);
+        GridBagConstraints gbc_ch_windows = new GridBagConstraints();
+        gbc_ch_windows.insets = new Insets(0, 0, 5, 5);
+        gbc_ch_windows.gridx = 0;
+        gbc_ch_windows.gridy = 12;
+        panel.add(ch_windows, gbc_ch_windows);
+    }
+
+    private void addIosCheckboxes(JPanel panel) {
+        ch_1x = new JCheckBox("@1x");
+        ch_1x.setSelected(true);
+        GridBagConstraints gbc_ch_1x = new GridBagConstraints();
+        gbc_ch_1x.insets = new Insets(0, 0, 5, 5);
+        gbc_ch_1x.gridx = 0;
+        gbc_ch_1x.gridy = 7;
+        panel.add(ch_1x, gbc_ch_1x);
+
+        ch_15x = new JCheckBox("@1.5x");
+        ch_15x.setSelected(true);
+        GridBagConstraints gbc_ch_15x = new GridBagConstraints();
+        gbc_ch_15x.insets = new Insets(0, 0, 5, 5);
+        gbc_ch_15x.gridx = 0;
+        gbc_ch_15x.gridy = 8;
+        panel.add(ch_15x, gbc_ch_15x);
+
+        ch_2x = new JCheckBox("@2x");
+        ch_2x.setSelected(true);
+        GridBagConstraints gbc_ch_2x = new GridBagConstraints();
+        gbc_ch_2x.insets = new Insets(0, 0, 5, 5);
+        gbc_ch_2x.gridx = 0;
+        gbc_ch_2x.gridy = 9;
+        panel.add(ch_2x, gbc_ch_2x);
+
+        ch_3x = new JCheckBox("@3x");
+        ch_3x.setSelected(true);
+        GridBagConstraints gbc_ch_3x = new GridBagConstraints();
+        gbc_ch_3x.insets = new Insets(0, 0, 5, 5);
+        gbc_ch_3x.gridx = 0;
+        gbc_ch_3x.gridy = 10;
+        panel.add(ch_3x, gbc_ch_3x);
+
+        ch_4x = new JCheckBox("@4x");
+        ch_4x.setSelected(true);
+        GridBagConstraints gbc_ch_4x = new GridBagConstraints();
+        gbc_ch_4x.insets = new Insets(0, 0, 5, 5);
+        gbc_ch_4x.gridx = 0;
+        gbc_ch_4x.gridy = 11;
+        panel.add(ch_4x, gbc_ch_4x);
+    }
+
+    private void addAndroidCheckboxes(JPanel panel) {
+        ch_ldpi = new JCheckBox("ldpi");
+        ch_ldpi.setSelected(true);
+        GridBagConstraints gbc_ch_ldpi = new GridBagConstraints();
+        gbc_ch_ldpi.insets = new Insets(0, 0, 5, 5);
+        gbc_ch_ldpi.anchor = GridBagConstraints.NORTHWEST;
+        gbc_ch_ldpi.gridx = 0;
+        gbc_ch_ldpi.gridy = 0;
+        panel.add(ch_ldpi, gbc_ch_ldpi);
+
+        ch_mdpi = new JCheckBox("mdpi");
+        ch_mdpi.setSelected(true);
+        ch_mdpi.setHorizontalAlignment(SwingConstants.LEFT);
+        GridBagConstraints gbc_ch_mdpi = new GridBagConstraints();
+        gbc_ch_mdpi.anchor = GridBagConstraints.WEST;
+        gbc_ch_mdpi.insets = new Insets(0, 0, 5, 5);
+        gbc_ch_mdpi.gridx = 0;
+        gbc_ch_mdpi.gridy = 1;
+        panel.add(ch_mdpi, gbc_ch_mdpi);
+
+        ch_tvdpi = new JCheckBox("tvdpi");
+        GridBagConstraints gbc_ch_tvdpi = new GridBagConstraints();
+        gbc_ch_tvdpi.anchor = GridBagConstraints.WEST;
+        gbc_ch_tvdpi.insets = new Insets(0, 0, 5, 5);
+        gbc_ch_tvdpi.gridx = 0;
+        gbc_ch_tvdpi.gridy = 2;
+        panel.add(ch_tvdpi, gbc_ch_tvdpi);
+
+        ch_hdpi = new JCheckBox("hdpi");
+        ch_hdpi.setSelected(true);
+        GridBagConstraints gbc_ch_hdpi = new GridBagConstraints();
+        gbc_ch_hdpi.anchor = GridBagConstraints.WEST;
+        gbc_ch_hdpi.insets = new Insets(0, 0, 5, 5);
+        gbc_ch_hdpi.gridx = 0;
+        gbc_ch_hdpi.gridy = 3;
+        panel.add(ch_hdpi, gbc_ch_hdpi);
+
+        ch_xhdpi = new JCheckBox("xhdpi");
+        ch_xhdpi.setSelected(true);
+        GridBagConstraints gbc_ch_xhdpi = new GridBagConstraints();
+        gbc_ch_xhdpi.anchor = GridBagConstraints.WEST;
+        gbc_ch_xhdpi.insets = new Insets(0, 0, 5, 5);
+        gbc_ch_xhdpi.gridx = 0;
+        gbc_ch_xhdpi.gridy = 4;
+        panel.add(ch_xhdpi, gbc_ch_xhdpi);
+
+        ch_xxhdpi = new JCheckBox("xxhdpi");
+        ch_xxhdpi.setSelected(true);
+        GridBagConstraints gbc_ch_xxhdpi = new GridBagConstraints();
+        gbc_ch_xxhdpi.anchor = GridBagConstraints.WEST;
+        gbc_ch_xxhdpi.insets = new Insets(0, 0, 5, 5);
+        gbc_ch_xxhdpi.gridx = 0;
+        gbc_ch_xxhdpi.gridy = 5;
+        panel.add(ch_xxhdpi, gbc_ch_xxhdpi);
+
+        ch_xxxhdpi = new JCheckBox("xxxhdpi");
+        ch_xxxhdpi.setSelected(true);
+        GridBagConstraints gbc_ch_xxxhdpi = new GridBagConstraints();
+        gbc_ch_xxxhdpi.insets = new Insets(0, 0, 5, 5);
+        gbc_ch_xxxhdpi.gridx = 0;
+        gbc_ch_xxxhdpi.gridy = 6;
+        panel.add(ch_xxxhdpi, gbc_ch_xxxhdpi);
     }
 
     private void addAndroidDirectoryChooser() {
